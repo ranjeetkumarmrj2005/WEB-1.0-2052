@@ -1,4 +1,4 @@
-// ChatGPT Local Clone - All data in localStorage
+// ChatGPT USER INTERFACE
 const chatHistoryElem = document.getElementById('chat-history');
 const chatForm = document.getElementById('chat-form');
 const userInput = document.getElementById('user-input');
@@ -20,7 +20,7 @@ function saveModel(model) {
   localStorage.setItem(LS_MODEL, model);
 }
 function loadModel() {
-  return localStorage.getItem(LS_MODEL) || 'gpt-5.0';
+  return localStorage.getItem(LS_MODEL) || 'gpt-5.0';  //  TELL WHICH MODEL YOU CURRENTLY USING
 }
 
 function renderHistory(history) {
@@ -48,7 +48,7 @@ function clearHistory() {
 
 function startNewChat() {
   clearHistory();
-  addMessage('bot', 'Hello! How can I help you today?');
+  addMessage('bot', 'Hello! How can I help you today?'); //  IT WILL SHOW ON THE BACKGROUND 
 }
 
 function setModel(model) {
@@ -102,4 +102,5 @@ window.addEventListener('DOMContentLoaded', () => {
   } else {
     renderHistory(history);
   }
+
 });
